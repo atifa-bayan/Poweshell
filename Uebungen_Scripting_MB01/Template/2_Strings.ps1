@@ -18,3 +18,18 @@ e: - Schreibe den Namen deines Laptops in eine Variable und gib ihn auf die Kons
 
 $string1 = "Windows PowerShell ist ein leistungsfähiges Tool zur Automatisierung von Aufgaben"
 $string2 = "Digital Talent"
+#a:
+$new_string = $string1.Substring(0, 18) + $string2.Substring($string2.Length - 6)
+Write-Output "New String: $new_string"
+#b:
+$result_string = $new_string -replace "Windows", ""
+Write-Output "Result String: $result_string"
+#c:
+$current_script_path = $PSCommandPath
+Write-Output "Current Script Path: $current_script_path"
+#d:
+$user_name = $env:USERNAME
+Write-Output "User Name: $user_name"
+#e:
+$laptop_name = $env:COMPUTERNAME
+Write-Output "Laptop Name: $laptop_name"
